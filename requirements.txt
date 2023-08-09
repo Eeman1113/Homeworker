@@ -1,0 +1,9 @@
+matplotlib>=2.1.0
+pandas>= 0.22.0
+scikit-learn>=0.19.1
+scipy>=1.0.0
+svgwrite>=1.1.12
+tensorflow==2.10.0
+tensorflow-probability==0.18.*
+cairosvg>=2.7.0
+pypdf4>=1.27.*
