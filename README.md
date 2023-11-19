@@ -10,7 +10,7 @@ Homeworker is an implementation of handwriting synthesis experiments inspired by
 
 ```shell
 git clone https://github.com/Eeman1113/Homeworker/
-cd handwriting-synthesis
+cd Homeworker
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
