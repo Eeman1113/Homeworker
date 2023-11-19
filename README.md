@@ -1,26 +1,22 @@
+# Homeworker - Handwriting Synthesis
+
 ![](img/banner.svg)
 
-# Handwriting Synthesis (TFv2)
+## Overview
 
-Original repo migrated to tensorflow v2 with better structure
-
----
-
-Implementation of the handwriting synthesis experiments in the paper <a href="https://arxiv.org/abs/1308.0850">
-Generating Sequences with Recurrent Neural Networks</a> by Alex Graves. The implementation closely follows the original
-paper, with a few slight deviations, and the generated samples are of similar quality to those presented in the paper.
+Homeworker is an implementation of handwriting synthesis experiments inspired by the paper [Generating Sequences with Recurrent Neural Networks](https://arxiv.org/abs/1308.0850) by Alex Graves. The original repository has been migrated to TensorFlow v2 with improved structure. This project closely follows the paper with a few deviations, producing handwriting samples of similar quality to those presented in the research.
 
 ## Installation
 
 ```shell
-git clone https://github.com/otuva/handwriting-synthesis
+git clone https://github.com/Eeman1113/Homeworker/
 cd handwriting-synthesis
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-You can then run the demo as follows
+Run the demo:
 
 ```shell
 python main.py
@@ -37,7 +33,7 @@ lines = [
     "Seconds drift into the night",
     "The clock just ticks till my time expires",
 ]
-biases = [.75 for _ in lines]
+biases = [0.75 for _ in lines]
 styles = [9 for _ in lines]
 stroke_colors = ['red', 'green', 'black', 'blue']
 stroke_widths = [1, 2, 1, 2]
@@ -56,55 +52,20 @@ hand.write(
 ![](img/usage_demo.svg)
 
 ## Demonstrations
+<img width="601" alt="Screenshot 2023-11-19 at 10 23 24 PM" src="https://github.com/Eeman1113/Homeworker/assets/54275491/8c52d696-15c7-4821-9e75-b7cbf59d14bd">
 
-Below are a few hundred samples from the model, including some samples demonstrating the effect of priming and biasing
-the model. Loosely speaking, biasing controls the neatness of the samples and priming controls the style of the samples.
-The code for these demonstrations can be found in `main.py`.
+<img width="613" alt="Screenshot 2023-11-19 at 10 23 55 PM" src="https://github.com/Eeman1113/Homeworker/assets/54275491/fae820b4-94ff-4b5c-8875-cd0d850472c2">
 
-### Demo #1:
-
-The following samples were generated with a fixed style and fixed bias.
-
-**Smash Mouth – All Star (<a href="https://www.azlyrics.com/lyrics/smashmouth/allstar.html">lyrics</a>)**
-![](img/all_star.svg)
-
-### Demo #2
-
-The following samples were generated with varying style and fixed bias. Each verse is generated in a different style.
-
-**Vanessa Carlton – A Thousand Miles (<a href="https://www.azlyrics.com/lyrics/vanessacarlton/athousandmiles.html">
-lyrics</a>)**
-![](img/downtown.svg)
-
-### Demo #3
-
-The following samples were generated with a fixed style and varying bias. Each verse has a lower bias than the previous,
-with the last verse being unbiased.
-
-**Leonard Cohen – Hallelujah (<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">lyrics</a>)**
-![](img/give_up.svg)
 
 ## Training
 
-A pretrained model is included, but if you'd like to train your own,
-read [these instructions](model/README.md)
+A pretrained model is included, but instructions for training your own model can be found in [model/README.md](model/README.md).
 
 ## Contribute
 
-All Pull Requests and packaging  are welcome
-
-You can take a look at the [issues](https://github.com/otuva/handwriting-synthesis/issues)
-
-If there aren't any, you can see [TODO.md](TODO.md)
-
-If you are having a problem or have a feature request, feel free to open issue
+Contributions, pull requests, and packaging improvements are welcome. 
+If you encounter problems or have feature requests, feel free to open an issue.
 
 ---
 
-This project was intended to serve as a reference implementation for a research paper, but since the results are of
-decent quality, it may be worthwile to make the project more broadly usable. I plan to continue focusing on the machine
-learning side of things. That said, I'd welcome contributors who can:
-
-- Package this, and otherwise make it look more like a usable software project and less like research code.
-- Add support for more sophisticated drawing, animations, or anything else in this direction. Currently, the project
-  only creates some simple svg files.
+**Note:** This project was initially designed as a reference implementation for a research paper. While the focus remains on the machine learning aspects, contributors are encouraged to enhance usability, add support for more advanced drawing features, animations, or any other improvements. The AI model powering this project is affectionately named "Homeworker."
